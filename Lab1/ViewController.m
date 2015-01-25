@@ -17,22 +17,28 @@
 
 @implementation ViewController
 - (IBAction)ninja_button:(id)sender {
-    NSString *str1 = @"Congratulations, ";
-    NSString *str2 = @". \n You are now a ninja. ";
-    str1 = [str1 stringByAppendingString:@"Bob"];
+    NSString *str1 = @"Congratulations";
+    NSString *str2 = @". You are now a ninja. ";
+    if( [self.text_field.text length]!=0){
+        str1 = [str1 stringByAppendingString:@" "];
+        str1 = [str1 stringByAppendingString:self.text_field.text];
+    }
     str1 = [str1 stringByAppendingString:str2];
-    str1 = [str1 stringByAppendingString:@" \n You are a mercenary of feudal Japan. "];
-    str1 = [str1 stringByAppendingString:@"\nYour tasks include espionage, sabotage, infiltration, and assassination, and open combat in certain situations. "];
+    str1 = [str1 stringByAppendingString:@"  You are a mercenary of feudal Japan. "];
+    str1 = [str1 stringByAppendingString:@"Your tasks include espionage, sabotage, infiltration, and assassination, and open combat in certain situations. "];
     self.message.text = str1;
     self.message.textAlignment = NSTextAlignmentCenter;
 }
 - (IBAction)pirate_button:(id)sender {
-    NSString *str1 = @"Contratulations, ";
-    NSString *str2 = @". \n You are now a pirate.";
-    str1 = [str1 stringByAppendingString:@"Joe."];
+    NSString *str1 = @"Congratulations";
+    NSString *str2 = @". You are now a pirate.";
+    if( [self.text_field.text length]!=0){
+        str1 = [str1 stringByAppendingString:@" "];
+        str1 = [str1 stringByAppendingString:self.text_field.text];
+    }
     str1 = [str1 stringByAppendingString:str2];
-    str1 = [str1 stringByAppendingString:@" \nYou are a scourge of the seven seas."];
-    str1 = [str1 stringByAppendingString:@"\nYour tasks include plundering, firing cannons, and committing illegal acts at sea."];
+    str1 = [str1 stringByAppendingString:@" You are a scourge of the seven seas."];
+    str1 = [str1 stringByAppendingString:@"Your tasks include plundering, firing cannons, and committing illegal acts at sea."];
     
     self.message.text = str1;
     
