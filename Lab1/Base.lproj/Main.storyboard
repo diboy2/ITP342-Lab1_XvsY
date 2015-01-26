@@ -25,7 +25,7 @@
                                     <action selector="ninja_button:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Upg-4T-G8c"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAt-Zu-mxE">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAt-Zu-mxE">
                                 <rect key="frame" x="213" y="327" width="175" height="120"/>
                                 <state key="normal" image="pirate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,8 +45,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9c9-yC-sOF">
-                                <rect key="frame" x="99" y="455" width="136" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWj-Ec-d9Z">
+                                <rect key="frame" x="16" y="264" width="600" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="Sa7-ZT-miv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9c9-yC-sOF">
+                                <rect key="frame" x="60" y="38" width="423" height="193"/>
                                 <state key="normal" title="Background_button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -54,19 +63,17 @@
                                     <action selector="background_button:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kAd-wg-qYi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWj-Ec-d9Z">
-                                <rect key="frame" x="279" y="508" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="fwA-up-8g3" secondAttribute="centerX" id="7hM-b8-TaE"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="aWj-Ec-d9Z" secondAttribute="bottom" constant="8" symbolic="YES" id="9IZ-cz-ncd"/>
+                            <constraint firstItem="aWj-Ec-d9Z" firstAttribute="centerY" secondItem="9c9-yC-sOF" secondAttribute="centerY" id="H0H-e6-gCz"/>
+                            <constraint firstItem="aWj-Ec-d9Z" firstAttribute="centerX" secondItem="ZAt-Zu-mxE" secondAttribute="centerX" id="JGa-bQ-3VV"/>
+                            <constraint firstItem="aWj-Ec-d9Z" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="M7m-Ud-0HU"/>
+                            <constraint firstItem="aWj-Ec-d9Z" firstAttribute="top" secondItem="ZAt-Zu-mxE" secondAttribute="bottom" id="MYE-N8-Ylj"/>
                             <constraint firstAttribute="centerX" secondItem="ZAt-Zu-mxE" secondAttribute="centerX" id="TBG-kV-rHt"/>
                             <constraint firstAttribute="centerX" secondItem="ofW-LU-cec" secondAttribute="centerX" id="XZI-tW-JU3"/>
-                            <constraint firstAttribute="centerX" secondItem="aWj-Ec-d9Z" secondAttribute="centerX" id="hyK-I2-6pf"/>
                             <constraint firstAttribute="centerX" secondItem="9G8-fQ-5ch" secondAttribute="centerX" id="rzI-KR-GyG"/>
                         </constraints>
                     </view>
