@@ -16,7 +16,14 @@
 @end
 
 @implementation ViewController
-- (IBAction)ninja_button:(id)sender {
+
+- (IBAction) doneButtonPressed:(UITextField *) sender {
+    // dismisses the keyboard
+    [sender resignFirstResponder];
+}
+
+
+- (IBAction)ninjaButton:(id)sender {
     NSString *str1 = @"Congratulations";
     NSString *str2 = @". You are now a ninja. ";
     if( [self.text_field.text length]!=0){
@@ -29,7 +36,7 @@
     self.message.text = str1;
     self.message.textAlignment = NSTextAlignmentCenter;
 }
-- (IBAction)pirate_button:(id)sender {
+- (IBAction)pirate_button:(UIButton *)sender {
     NSString *str1 = @"Congratulations";
     NSString *str2 = @". You are now a pirate.";
     if( [self.text_field.text length]!=0){
@@ -43,7 +50,9 @@
     self.message.text = str1;
     
 }
+
 - (IBAction)background_button:(id)sender {
+    
 }
 
 - (void)viewDidLoad {
