@@ -61,9 +61,6 @@
     
 }
 
-- (IBAction)background_button:(id)sender {
-    
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
