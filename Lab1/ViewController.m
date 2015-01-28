@@ -22,6 +22,16 @@
     [sender resignFirstResponder];
 }
 
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [[event allTouches] anyObject];
+    if([self.text_field isFirstResponder] && [touch view] != self.text_field){
+        [self.text_field resignFirstResponder];
+    }
+    
+    [super touchesBegan:touches withEvent:event];
+                                              
+}
+
 
 - (IBAction)ninjaButton:(id)sender {
     NSString *str1 = @"Congratulations";
